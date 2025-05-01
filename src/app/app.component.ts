@@ -22,6 +22,7 @@ export class AppComponent {
   logout(): void {
     this.store.dispatch(AuthActions.logout());
     localStorage.removeItem('token');
+    localStorage.removeItem('userId');
     this.router.navigate(['/auth/login']);
   }
 }

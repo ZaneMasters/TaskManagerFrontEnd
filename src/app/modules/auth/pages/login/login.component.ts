@@ -28,6 +28,7 @@ export class LoginComponent {
 
         // Guardar el token en localStorage
         localStorage.setItem('token', response.token);
+        localStorage.setItem('userId', response.userId.toString());
 
         // Mostrar alerta de éxito
         Swal.fire({
